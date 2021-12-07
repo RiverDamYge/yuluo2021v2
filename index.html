@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="renderer" content="webkit" />
+    <link href="http://riverdamyoge.gitee.io/linyunluo/Content/css/index.css" rel="stylesheet" />
+    <script src="http://riverdamyoge.gitee.io/linyunluo/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="http://riverdamyoge.gitee.io/linyunluo/Scripts/validation.js"></script>
+    <link href="http://riverdamyoge.gitee.io/linyunluo/Scripts/layer/theme/layer.css" rel="stylesheet" />
+    <script src="http://riverdamyoge.gitee.io/linyunluo/Scripts/layer/layer.js"></script>
+    <title>闽南师范大学-疫情防控管理平台</title>
+    <script type="text/javascript">
+        /*解决苹果返回不刷新问题*/
+        $(function () {
+            var isPageHide = false;
+            window.addEventListener('pageshow', function () {
+                if (isPageHide) {
+                    window.location.reload();
+                }
+            });
+            window.addEventListener('pagehide', function () {
+                isPageHide = true;
+            });
+        });
+    </script>
+</head>
+<body>
+    
+
+<div class="logo">
+    <img src="http://riverdamyoge.gitee.io/linyunluo/Content/img/logo.png" />
+</div>
+<div class="container">
+    <div class="pad">
+        <div class="infos">
+            <p class="title">进出场地监控卡</p>
+            <p class="info">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：林宇洛</p>
+                <p class="info">学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：1918080107</p>
+                <p class="info">所属学院：商学院</p>
+
+            <p class="info">场地名称：校门</p>
+            <p class="info">进出类型：进</p>
+            <p class="info" id="time1"></p>
+        </div>
+        <div class="codebox">
+            <div class="codeimg">
+                <img src="http://riverdamyoge.gitee.io/linyunluo/Content/img/GetQRCode.jfif" />
+            </div>
+            <div class="lb"></div>
+            <div class="rb"></div>
+        </div>
+    </div>
+</div>
+<link href="http://riverdamyoge.gitee.io/linyunluo/Content/css/MonitoringCard.css" rel="stylesheet" />
+        <link href="http://riverdamyoge.gitee.io/linyunluo/Content/css/menustyle.css" rel="stylesheet" />
+        <script src="http://riverdamyoge.gitee.io/linyunluo/Scripts/menu.js"></script>
+        <div id="cd-nav" class="is-fixed">
+            <a href="javascript:void(0)" class="cd-nav-trigger"><span></span></a>
+            <nav id="cd-main-nav">
+                <ul>
+                        <li>
+                            <a href="http://dxg.mnnu.edu.cn/SPCP/Web/Account/ChooseType">
+                                <img src="http://riverdamyoge.gitee.io/linyunluo/Content//img/icon1.png" /> 返回首页
+                            </a>
+                        </li>
+                                        <li>
+                        <a href="http://dxg.mnnu.edu.cn/SPCP/Web/Account/Logout">
+                            <img src="http://riverdamyoge.gitee.io/linyunluo/Content/img/icon3.png" /> 安全退出
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+</body>
+</html>
+<script>
+
+
+var a = new Date();
+var minute =a.getMinutes();
+var Hours =a.getHours();
+var Month =a.getMonth();
+var Date =a.getDate();
+var b = a.toLocaleTimeString();
+var c = a.toLocaleDateString();
+if(minute<10){
+minute = "0"+minute;
+}
+if(Month<10){
+Month = Month+1;
+}
+if(Date<10){
+Date = "0"+Date;
+}
+if(Hours<10){
+  Hours = "0"+Hours;
+}
+document.getElementById("time1").innerHTML = "扫描时间：" + a.getFullYear() + "." +"0" +Month + "." + Date+" "+Hours+":"+minute;
+
+
+
+
+
+
+</script>
