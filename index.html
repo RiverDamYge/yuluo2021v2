@@ -96,8 +96,13 @@ Date = "0"+Date;
 if(Hours<10){
   Hours = "0"+Hours;
 }
-document.getElementById("time1").innerHTML = "扫描时间：" + a.getFullYear() + "." +"0" +Month + "." + Date+" "+Hours+":"+minute;
 
+if(Month<10){
+    document.getElementById("time1").innerHTML = "扫描时间：" + a.getFullYear() + "." +"0" +Month + "." + Date+" "+Hours+":"+minute;
+}
+    else{
+         document.getElementById("time1").innerHTML = "扫描时间：" + a.getFullYear() + "." +Month + "." + Date+" "+Hours+":"+minute;
+    }
 
 
 
